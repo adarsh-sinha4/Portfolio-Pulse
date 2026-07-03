@@ -1,0 +1,14 @@
+# Netlify config for the Next.js 15 App Router app.
+# The Next Runtime (@netlify/plugin-nextjs) handles SSR + API routes as
+# serverless functions; Netlify auto-installs it for a detected Next.js site,
+# and we declare it here explicitly for reproducibility.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
